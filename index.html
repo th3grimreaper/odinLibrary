@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="dist/style.css" />
-    <script src="script/script.js"></script>
-  </head>
 
-  <body>
-    <div class="container">
-      <header class="header">
-        <div class="main__heading">Library</div>
-      </header>
-      <main class="maincont">
-        <button class="maincont__btn">New Book</button>
-        <div class="maincont__modal">
-          <form action="#" class="modal-form">
-            <fieldset class="form-field">
-              <legend>Add Book</legend>
-              <div class="input-container">
-                <label for="book-name" class="book">Book Name</label>
-                <input type="text" id="book-name" name="book" required />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="dist/style.css" />
+  <script src="script/script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="main__heading">Library</div>
+    </header>
+    <main class="maincont">
+      <button class="newbook__btn">New Book</button>
+      <div class="maincont__modal">
+        <form action="#" class="modal-form">
+          <fieldset class="form-field">
+            <legend>Add Book</legend>
+            <div class="input-container">
+              <label for="book-name" class="book">Book Name</label>
+              <input type="text" id="book-name" name="book" required />
+            </div>
+            <div class="input-container">
+              <label for="author-name" class="author">Author Name</label>
+              <input type="text" id="author-name" name="author" required />
+            </div>
+            <div class="input-container">
+              <label for="page-count" class="pages">Number of Pages</label>
+              <input type="text" id="page-count" name="pages" required />
+            </div>
+            <div class="input-container">
+              <div class="radio-desc">Have you read this book?</div>
+              <div class="radio-options-container">
+                <input type="checkbox" id="read-status" value="read" />
+                <label for="read-status" class="read">Read</label>
               </div>
-              <div class="input-container">
-                <label for="author-name" class="author">Author Name</label>
-                <input type="text" id="author-name" name="author" required />
-              </div>
-              <div class="input-container">
-                <label for="page-count" class="pages">Number of Pages</label>
-                <input type="text" id="page-count" name="pages" required />
-              </div>
-              <div class="input-container">
-                <div class="radio-desc">Have you read this book?</div>
-                <div class="radio-options-container">
-                  <input type="checkbox" id="read-status" value="read" />
-                  <label for="read-status" class="read">Read</label>
-                </div>
-              </div>
-              <button type="submit">Add</button>
-            </fieldset>
-          </form>
-        </div>
-      </main>
-    </div>
-  </body>
+            </div>
+            <button type="submit" class="addbook__btn">Add</button>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+  </div>
+</body>
+
 </html>
