@@ -19,14 +19,27 @@
         <div class="maincont__modal">
           <form action="#" class="modal-form">
             <fieldset class="form-field">
+              <legend>Add Book</legend>
               <div class="input-container">
                 <label for="book-name" class="book">Book Name</label>
                 <input type="text" id="book-name" name="book" required />
               </div>
-              <div class="input-container"></div>
-              <div class="input-container"></div>
-              <div class="input-container"></div>
-              <button type="submit"></button>
+              <div class="input-container">
+                <label for="author-name" class="author">Author Name</label>
+                <input type="text" id="author-name" name="author" required />
+              </div>
+              <div class="input-container">
+                <label for="page-count" class="pages">Number of Pages</label>
+                <input type="text" id="page-count" name="pages" required />
+              </div>
+              <div class="input-container">
+                <div class="radio-desc">Have you read this book?</div>
+                <div class="radio-options-container">
+                  <input type="checkbox" id="read-status" value="read" />
+                  <label for="read-status" class="read">Read</label>
+                </div>
+              </div>
+              <button type="submit">Add</button>
             </fieldset>
           </form>
         </div>
