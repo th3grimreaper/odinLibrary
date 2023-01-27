@@ -12,10 +12,24 @@
   <body>
     <div class="container">
       <header class="header">
-        <div class="heading">Library</div>
+        <div class="main__heading">Library</div>
       </header>
-      <main class="main-content">
-        <button class="btn">Add Book</button>
+      <main class="maincont">
+        <button class="maincont__btn">New Book</button>
+        <div class="maincont__modal">
+          <form action="#" class="modal-form">
+            <fieldset class="form-field">
+              <div class="input-container">
+                <label for="book-name" class="book">Book Name</label>
+                <input type="text" id="book-name" name="book" required />
+              </div>
+              <div class="input-container"></div>
+              <div class="input-container"></div>
+              <div class="input-container"></div>
+              <button type="submit"></button>
+            </fieldset>
+          </form>
+        </div>
       </main>
     </div>
   </body>

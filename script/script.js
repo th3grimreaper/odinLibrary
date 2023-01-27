@@ -1,3 +1,5 @@
+let addBtn = document.querySelector('.btn')
+
 let myLibrary = []
 
 function Book(bookName, author, pages, readStatus) {
@@ -8,8 +10,7 @@ function Book(bookName, author, pages, readStatus) {
 }
 
 function addBookToLibrary(name, author, pages, read) {
-  let newBook = new Book(name, author, pages, read)
-  myLibrary.push(newBook)
+  myLibrary.push(new Book(name, author, pages, read))
 }
 
 function removeBookFromLibrary(index) {
@@ -19,10 +20,3 @@ function removeBookFromLibrary(index) {
 myLibrary.forEach((value) => {
   console.log(value)
 })
-
-addBookToLibrary('The Stranger', 'Albert Camus', 200, false)
-addBookToLibrary('Mahabharat', 'Kisari Mohan Ganguly', 5000, true)
-
-console.log(myLibrary)
-removeBookFromLibrary(1)
-console.log(myLibrary)
