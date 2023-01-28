@@ -18,6 +18,12 @@ fieldset {
   font-weight: 700;
   box-shadow: 2px 2px 4px rgba(73, 93, 99, 0.2);
 }
+.newbook__btn:is(:hover, :active) {
+  background-color: #608781;
+}
+.newbook__btn:active {
+  transform: translate(0, 2px);
+}
 
 .addbook__btn {
   border-style: none;
@@ -29,6 +35,12 @@ fieldset {
   font-weight: 700;
   box-shadow: 2px 2px 4px rgba(73, 93, 99, 0.2);
 }
+.addbook__btn:is(:hover, :active) {
+  background-color: #517c62;
+}
+.addbook__btn:active {
+  transform: translate(0, 2px);
+}
 
 .maincont__modal {
   color: #495d63;
@@ -36,7 +48,16 @@ fieldset {
   background-color: #98b6b1;
   padding: 0.75em;
   padding: 2em;
+  border-style: none;
   border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(73, 93, 99, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.maincont__modal::backdrop {
+  background-color: rgba(255, 0, 0, 0.25);
 }
 
 fieldset legend {
@@ -54,6 +75,13 @@ fieldset div + button {
   flex-direction: column;
   justify-content: space-between;
   gap: 0.25em;
+}
+
+input {
+  align-self: center;
+  border-radius: 10px;
+  padding: 0.25em;
+  border-style: none;
 }
 
 .radio {

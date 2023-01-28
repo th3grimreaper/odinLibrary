@@ -2,11 +2,19 @@
 @use 'mixins';
 
 .newbook__btn {
-  @include mixins.button-style(colors.$opal, colors.$pure-white, 1em);
+  @include mixins.button-style(colors.$opal-light, colors.$pure-white, 1em);
   @include mixins.btn_shadow(colors.$deep-space-sparkle, 0.2);
+  &:is(:hover, :active) {
+    @include mixins.button-hover(colors.$opal, 1);
+  }
+  @include mixins.button-translate(active);
 }
 
 .addbook__btn {
-  @include mixins.button-style(colors.$russian-green, colors.$pure-white, 1em);
+  @include mixins.button-style(colors.$russian-green-light, colors.$pure-white, 1em);
   @include mixins.btn_shadow(colors.$deep-space-sparkle, 0.2);
+  &:is(:hover, :active) {
+    @include mixins.button-hover(colors.$russian-green, 1);
+  }
+  @include mixins.button-translate(active);
 }

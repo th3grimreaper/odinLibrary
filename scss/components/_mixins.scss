@@ -8,6 +8,16 @@
   font-weight: 700;
 }
 
+@mixin button-hover($bgcolor, $alpha) {
+  background-color: rgba($bgcolor, $alpha);
+}
+
+@mixin button-translate($state) {
+  &:#{$state} {
+    transform: translate(0, 2px);
+  }
+}
+
 @mixin btn_shadow($color, $alpha) {
   box-shadow: 2px 2px 4px rgba($color, $alpha);
 }
