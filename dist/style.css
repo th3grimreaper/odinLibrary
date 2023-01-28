@@ -16,7 +16,7 @@ fieldset {
   color: #ffffff;
   font-size: 1em;
   font-weight: 700;
-  box-shadow: 2px 2px 4px rgba(73, 93, 99, 0.2);
+  box-shadow: 2px 2px 4px rgba(57, 61, 63, 0.2);
 }
 .newbook__btn:is(:hover, :active) {
   background-color: #608781;
@@ -33,7 +33,7 @@ fieldset {
   color: #ffffff;
   font-size: 1em;
   font-weight: 700;
-  box-shadow: 2px 2px 4px rgba(73, 93, 99, 0.2);
+  box-shadow: 2px 2px 4px rgba(57, 61, 63, 0.2);
 }
 .addbook__btn:is(:hover, :active) {
   background-color: #517c62;
@@ -43,14 +43,14 @@ fieldset {
 }
 
 .maincont__modal {
-  color: #495d63;
+  box-shadow: 2px 2px 4px rgba(57, 61, 63, 0.2);
+  color: #393d3f;
   display: none;
   background-color: #98b6b1;
   padding: 0.75em;
-  padding: 2em;
+  padding: 1.5em;
   border-style: none;
   border-radius: 10px;
-  box-shadow: 2px 2px 4px rgba(73, 93, 99, 0.2);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -87,16 +87,30 @@ input {
 .radio {
   display: flex;
   flex-direction: column;
+  gap: 0.125em;
 }
 
 @media (min-width: 600px) {
   .input-container {
     flex-direction: row;
+    gap: 1em;
   }
   .radio {
     flex-direction: column;
   }
 }
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.cards-container .card {
+  box-shadow: 2px 2px 4px rgba(57, 61, 63, 0.2);
+  padding: 2em;
+  background-color: #98b6b1;
+  color: #393d3f;
+  display: flex;
+}
+
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -108,15 +122,18 @@ input {
   grid-template-rows: 2fr 10fr 1fr;
 }
 
+/* header */
 .header {
-  background-color: #d7bcc8;
+  background-color: #c9a7a8;
   padding: 0.75em;
   font-size: clamp(1.5em, 5vw, 2em);
   font-weight: 700;
   grid-row: 1/2;
+  box-shadow: 0px 2px 3px rgba(57, 61, 63, 0.2);
+  z-index: 2;
 }
 .header .main__heading {
-  color: #495d63;
+  color: #393d3f;
 }
 
 .header,
@@ -124,9 +141,9 @@ input {
   flex: none;
 }
 
-/*main content*/
+/* main content */
 .maincont {
-  background-color: #fac8cd;
+  background-color: #f0dcca;
   padding: 0.75em;
   position: relative;
   display: flex;
@@ -136,9 +153,9 @@ input {
   grid-row: 2/3;
 }
 
-/*footer*/
+/* footer */
 .footer {
-  background-color: #d7bcc8;
+  background-color: #c9a7a8;
   padding: 0.75em;
   font-size: 12px;
   padding: 0.25em;
@@ -147,7 +164,7 @@ input {
   justify-content: center;
   align-items: center;
   padding: none;
-  color: #495d63;
+  color: #393d3f;
 }
 
 /*# sourceMappingURL=style.css.map */

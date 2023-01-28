@@ -17,12 +17,14 @@ $font: 'Roboto', sans-serif;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr 10fr 1fr;
 }
-
+/* header */
 .header {
-  @include mixins.container-style(colors.$queen-pink);
+  @include mixins.container-style(colors.$copper-rose);
   font-size: clamp(1.5em, 5vw, 2em);
   font-weight: 700;
   grid-row: 1/2;
+  box-shadow: 0px 2px 3px rgba(colors.$deep-space-sparkle, 0.2);
+  z-index: 2;
 
   .main__heading {
     color: colors.$deep-space-sparkle;
@@ -34,10 +36,10 @@ $font: 'Roboto', sans-serif;
   flex: none;
 }
 
-/*main content*/
+/* main content */
 
 .maincont {
-  @include mixins.container-style(colors.$baby-pink);
+  @include mixins.container-style(colors.$almond);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -46,10 +48,10 @@ $font: 'Roboto', sans-serif;
   grid-row: 2/3;
 }
 
-/*footer*/
+/* footer */
 
 .footer {
-  @include mixins.container-style(colors.$queen-pink);
+  @include mixins.container-style(colors.$copper-rose);
   font-size: 12px;
   padding: 0.25em;
   grid-row: 3/4;

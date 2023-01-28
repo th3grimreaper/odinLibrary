@@ -5,6 +5,7 @@ const bookName = document.querySelector('#book-name')
 const authorName = document.querySelector('#author-name')
 const pageCount = document.querySelector('#page-count')
 const readStatus = document.querySelector('#read-status')
+const cardsContainer = document.querySelector('.cards-container')
 
 addNewBookBtn.addEventListener('click', showModal)
 addBookBtn.addEventListener('click', addBooktoArray)
@@ -25,10 +26,6 @@ function addBookToLibrary(name, author, pages, read) {
 function removeBookFromLibrary(index) {
   myLibrary.splice(index, 1)
 }
-
-myLibrary.forEach((value) => {
-  console.log(value)
-})
 
 function addBooktoArray(e) {
   e.preventDefault()
@@ -57,4 +54,9 @@ function resetForm() {
 function showModal() {
   modal.style.display = 'block'
   addNewBookBtn.style.display = 'none'
+}
+
+function createBookCard(bookName, authorName, pageCount, readStatus) {
+  let card = document.createElement('div')
+  card.classList.add('card')
 }

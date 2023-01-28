@@ -18,11 +18,17 @@
   }
 }
 
-@mixin btn_shadow($color, $alpha) {
+@mixin shadow($color, $alpha) {
   box-shadow: 2px 2px 4px rgba($color, $alpha);
 }
 
 @mixin container-style($bgcolor) {
   background-color: $bgcolor;
   padding: 0.75em;
+}
+
+@mixin card-style($bgcolor, $color) {
+  padding: 2em;
+  background-color: $bgcolor;
+  color: $color;
 }
