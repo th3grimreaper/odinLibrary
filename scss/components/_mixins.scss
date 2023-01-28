@@ -1,0 +1,18 @@
+@mixin button-style($bgcolor, $color, $fontsize) {
+  border-style: none;
+  border-radius: 10px;
+  padding: 0.75em 2em;
+  background-color: $bgcolor;
+  color: $color;
+  font-size: $fontsize;
+  font-weight: 700;
+}
+
+@mixin btn_shadow($color, $alpha) {
+  box-shadow: 2px 2px 4px rgba($color, $alpha);
+}
+
+@mixin container-style($bgcolor) {
+  background-color: $bgcolor;
+  padding: 0.75em;
+}

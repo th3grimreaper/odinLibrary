@@ -1,0 +1,12 @@
+@use 'colors';
+@use 'mixins';
+
+.newbook__btn {
+  @include mixins.button-style(colors.$opal, colors.$pure-white, 1em);
+  @include mixins.btn_shadow(colors.$deep-space-sparkle, 0.2);
+}
+
+.addbook__btn {
+  @include mixins.button-style(colors.$russian-green, colors.$pure-white, 1em);
+  @include mixins.btn_shadow(colors.$deep-space-sparkle, 0.2);
+}

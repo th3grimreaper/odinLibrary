@@ -1,0 +1,60 @@
+@use 'colors';
+@use 'mixins';
+@use 'buttons';
+@use 'modal';
+@use 'media';
+
+$font: 'Roboto', sans-serif;
+
+* {
+  font-family: $font;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 10fr 1fr;
+}
+
+.header {
+  @include mixins.container-style(colors.$queen-pink);
+  font-size: clamp(1.5em, 5vw, 2em);
+  font-weight: 700;
+  grid-row: 1/2;
+
+  .main__heading {
+    color: colors.$deep-space-sparkle;
+  }
+}
+
+.header,
+.footer {
+  flex: none;
+}
+
+/*main content*/
+
+.maincont {
+  @include mixins.container-style(colors.$baby-pink);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  grid-row: 2/3;
+}
+
+/*footer*/
+
+.footer {
+  @include mixins.container-style(colors.$queen-pink);
+  font-size: 12px;
+  padding: 0.25em;
+  grid-row: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: none;
+  color: colors.$deep-space-sparkle;
+}

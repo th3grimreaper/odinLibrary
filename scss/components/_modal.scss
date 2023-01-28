@@ -1,0 +1,34 @@
+@use 'colors';
+@use 'mixins';
+
+.maincont__modal {
+  color: colors.$deep-space-sparkle;
+  display: block;
+  @include mixins.container-style(colors.$opal);
+  padding: 2em;
+  border-radius: 10px;
+}
+
+fieldset {
+  legend {
+    font-size: 1.5em;
+    text-decoration: underline;
+  }
+  div + div,
+  legend + div,
+  div + button {
+    margin-top: 1em;
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.25em;
+}
+
+.radio {
+  display: flex;
+  flex-direction: column;
+}
