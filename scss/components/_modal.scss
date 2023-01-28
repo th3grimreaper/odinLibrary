@@ -3,7 +3,7 @@
 
 .maincont__modal {
   color: colors.$deep-space-sparkle;
-  display: block;
+  display: none;
   @include mixins.container-style(colors.$opal);
   padding: 2em;
   border-radius: 10px;

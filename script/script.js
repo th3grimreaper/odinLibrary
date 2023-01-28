@@ -1,4 +1,5 @@
-let addBtn = document.querySelector('.btn')
+const addBtn = document.querySelector('.newbook__btn')
+const modal = document.querySelector('.maincont__modal')
 
 let myLibrary = []
 
@@ -20,3 +21,9 @@ function removeBookFromLibrary(index) {
 myLibrary.forEach((value) => {
   console.log(value)
 })
+
+addBtn.addEventListener('click', showModal)
+
+function showModal() {
+  modal.style.display = 'block'
+}

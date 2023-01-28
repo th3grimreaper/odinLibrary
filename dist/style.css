@@ -32,7 +32,7 @@ fieldset {
 
 .maincont__modal {
   color: #495d63;
-  display: block;
+  display: none;
   background-color: #98b6b1;
   padding: 0.75em;
   padding: 2em;
