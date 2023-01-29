@@ -1,5 +1,6 @@
 const addNewBookBtn = document.querySelector('.newbook__btn')
 const addBookBtn = document.querySelector('.addbook__btn')
+const cancelBtn = document.querySelector('.cancel__btn')
 const modal = document.querySelector('.maincont__modal')
 // book contents
 const bookName = document.querySelector('#book-name')
@@ -11,6 +12,7 @@ const cardsContainer = document.querySelector('.cards-container')
 
 addNewBookBtn.addEventListener('click', showModal)
 addBookBtn.addEventListener('click', addBooktoArray)
+cancelBtn.addEventListener('click', cancelBookAdd)
 
 let myLibrary = []
 
@@ -36,6 +38,11 @@ function addBooktoArray(e) {
     createBookCard(bookName.value, authorName.value, pageCount.value, readStatus.checked)
     resetForm()
   }
+}
+
+function cancelBookAdd(e) {
+  e.preventDefault()
+  resetForm()
 }
 
 function formValidation() {

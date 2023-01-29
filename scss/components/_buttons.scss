@@ -1,7 +1,8 @@
 @use 'colors';
 @use 'mixins';
 
-.newbook__btn {
+.newbook__btn,
+.cancel__btn {
   @include mixins.button-style(colors.$opal-light, colors.$pure-white, 1em);
   @include mixins.shadow(colors.$deep-space-sparkle, 0.2);
   &:is(:hover, :active) {
@@ -21,7 +22,8 @@
   @include mixins.button-translate(active);
 }
 
-.removeBook__btn {
+.removeBook__btn,
+.cancel__btn {
   @include mixins.button-style(colors.$copper-rose, colors.$deep-space-sparkle, 1em);
   &:is(:hover, :active) {
     @include mixins.button-hover(colors.$copper-rose-darker, 1);

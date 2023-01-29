@@ -8,7 +8,8 @@ fieldset {
   border: 0;
 }
 
-.newbook__btn {
+.newbook__btn,
+.cancel__btn {
   border-style: none;
   border-radius: 10px;
   padding: 0.75em 2em;
@@ -18,10 +19,12 @@ fieldset {
   font-weight: 700;
   box-shadow: 2px 2px 4px rgba(57, 61, 63, 0.2);
 }
-.newbook__btn:is(:hover, :active) {
+.newbook__btn:is(:hover, :active),
+.cancel__btn:is(:hover, :active) {
   background-color: #608781;
 }
-.newbook__btn:active {
+.newbook__btn:active,
+.cancel__btn:active {
   transform: translate(0, 2px);
 }
 
@@ -48,7 +51,8 @@ fieldset {
   transform: translate(0, 2px);
 }
 
-.removeBook__btn {
+.removeBook__btn,
+.cancel__btn {
   border-style: none;
   border-radius: 10px;
   padding: 0.75em 2em;
@@ -57,7 +61,8 @@ fieldset {
   font-size: 1em;
   font-weight: 700;
 }
-.removeBook__btn:is(:hover, :active) {
+.removeBook__btn:is(:hover, :active),
+.cancel__btn:is(:hover, :active) {
   background-color: #a87173;
   color: #ffffff;
 }
@@ -83,9 +88,6 @@ fieldset {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.maincont__modal::backdrop {
-  background-color: rgba(255, 0, 0, 0.25);
-}
 
 fieldset legend {
   font-size: 1.5em;
@@ -100,8 +102,11 @@ fieldset div + button {
 .input-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 0.25em;
+}
+.input-container input:is([type=text], [type=number]) {
+  width: 100%;
 }
 
 input {
@@ -117,14 +122,26 @@ input {
   gap: 0.125em;
 }
 
+.modal__buttons {
+  display: flex;
+  gap: 0.5em;
+}
+
 @media (min-width: 600px) {
   .input-container {
     flex-direction: row;
+    justify-content: space-between;
     gap: 1em;
+  }
+  .input-container input:is([type=text], [type=number]) {
+    width: auto;
   }
   .radio {
     flex-direction: column;
     gap: 0.125em;
+  }
+  .modal__buttons {
+    justify-content: space-around;
   }
 }
 .cards-container {
