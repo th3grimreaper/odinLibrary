@@ -1,10 +1,12 @@
 const addNewBookBtn = document.querySelector('.newbook__btn')
 const addBookBtn = document.querySelector('.addbook__btn')
 const modal = document.querySelector('.maincont__modal')
+// book contents
 const bookName = document.querySelector('#book-name')
 const authorName = document.querySelector('#author-name')
 const pageCount = document.querySelector('#page-count')
 const readStatus = document.querySelector('#read-status')
+// book cards
 const cardsContainer = document.querySelector('.cards-container')
 
 addNewBookBtn.addEventListener('click', showModal)
@@ -31,6 +33,7 @@ function addBooktoArray(e) {
   e.preventDefault()
   if (formValidation()) {
     addBookToLibrary(bookName.value, authorName.value, pageCount.value, readStatus.checked)
+    createBookCard(bookName.value, authorName.value, pageCount.value, readStatus.checked)
     resetForm()
   }
 }
@@ -59,6 +62,33 @@ function showModal() {
 }
 
 function createBookCard(bookName, authorName, pageCount, readStatus) {
+  let fragment = document.createDocumentFragment()
   let card = document.createElement('div')
   card.classList.add('card')
+  let firstDiv = document.createElement('div')
+  let secondDiv = document.createElement('div')
+  let thirdDiv = document.createElement('div')
+  let fourthDiv = document.createElement('div')
+  let fifthDiv = document.createElement('div')
+  let markReadBtn = document.createElement('button')
+  let removeBookBtn = document.createElement('button')
+  firstDiv.textContent = bookName
+  secondDiv.textContent = `By ${authorName}`
+  thirdDiv.textContent = pageCount
+  fourthDiv.textContent = readStatus ? 'Read' : 'Not Read'
+  markReadBtn.textContent = 'Mark Read'
+  removeBookBtn.textContent = 'Remove Book'
+  fifthDiv.classList.add('btn')
+  markReadBtn.classList.add('markRead__btn')
+  removeBookBtn.classList.add('removeBook__btn')
+  fifthDiv.appendChild(markReadBtn)
+  fifthDiv.appendChild(removeBookBtn)
+  card.appendChild(firstDiv)
+  card.appendChild(secondDiv)
+  card.appendChild(thirdDiv)
+  card.appendChild(fourthDiv)
+  card.appendChild(fifthDiv)
+  // attach card to fragment
+  fragment.appendChild(card)
+  cardsContainer.appendChild(fragment)
 }
