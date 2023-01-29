@@ -13,8 +13,16 @@ const cardsContainer = document.querySelector('.cards-container')
 addNewBookBtn.addEventListener('click', showModal)
 addBookBtn.addEventListener('click', addBooktoArray)
 cancelBtn.addEventListener('click', cancelBookAdd)
+cardsContainer.addEventListener('click', (e) => {
+  let indexOfCard
+  if (e.target.classList.contains('removeBook__btn')) {
+    indexOfCard = e.target.getAttribute('data-index')
+    myLibrary.splice(indexOfCard, 1)
+  }
+})
 
 let myLibrary = []
+let index = 0
 
 function Book(bookName, author, pages, readStatus) {
   this.bookName = bookName
@@ -35,8 +43,9 @@ function addBooktoArray(e) {
   e.preventDefault()
   if (formValidation()) {
     addBookToLibrary(bookName.value, authorName.value, pageCount.value, readStatus.checked)
-    createBookCard(bookName.value, authorName.value, pageCount.value, readStatus.checked)
+    createBookCard(index, bookName.value, authorName.value, pageCount.value, readStatus.checked)
     resetForm()
+    index += 1
   }
 }
 
@@ -68,10 +77,11 @@ function showModal() {
   cardsContainer.style.display = 'none'
 }
 
-function createBookCard(bookName, authorName, pageCount, readStatus) {
+function createBookCard(indexVal, bookName, authorName, pageCount, readStatus) {
   let fragment = document.createDocumentFragment()
   let card = document.createElement('div')
   card.classList.add('card')
+  card.setAttribute('data-index', indexVal)
   let firstDiv = document.createElement('div')
   let secondDiv = document.createElement('div')
   let thirdDiv = document.createElement('div')
@@ -79,6 +89,8 @@ function createBookCard(bookName, authorName, pageCount, readStatus) {
   let fifthDiv = document.createElement('div')
   let markReadBtn = document.createElement('button')
   let removeBookBtn = document.createElement('button')
+  markReadBtn.setAttribute('data-index', indexVal)
+  removeBookBtn.setAttribute('data-index', indexVal)
   firstDiv.textContent = bookName
   secondDiv.textContent = `By ${authorName}`
   thirdDiv.textContent = pageCount
