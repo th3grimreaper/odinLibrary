@@ -10,11 +10,28 @@
   @include mixins.button-translate(active);
 }
 
-.addbook__btn {
+.addbook__btn,
+.markRead__btn,
+.removeBook__btn {
   @include mixins.button-style(colors.$russian-green-light, colors.$pure-white, 1em);
   @include mixins.shadow(colors.$deep-space-sparkle, 0.2);
   &:is(:hover, :active) {
     @include mixins.button-hover(colors.$russian-green, 1);
   }
   @include mixins.button-translate(active);
+}
+
+.removeBook__btn {
+  @include mixins.button-style(colors.$copper-rose, colors.$deep-space-sparkle, 1em);
+  &:is(:hover, :active) {
+    @include mixins.button-hover(colors.$copper-rose-darker, 1);
+    color: colors.$pure-white;
+  }
+}
+
+.markRead__btn,
+.removeBook__btn {
+  padding: 0.5em 1em;
+  font-size: 12px;
+  gap: 1em;
 }

@@ -25,7 +25,9 @@ fieldset {
   transform: translate(0, 2px);
 }
 
-.addbook__btn {
+.addbook__btn,
+.markRead__btn,
+.removeBook__btn {
   border-style: none;
   border-radius: 10px;
   padding: 0.75em 2em;
@@ -35,11 +37,36 @@ fieldset {
   font-weight: 700;
   box-shadow: 2px 2px 4px rgba(57, 61, 63, 0.2);
 }
-.addbook__btn:is(:hover, :active) {
+.addbook__btn:is(:hover, :active),
+.markRead__btn:is(:hover, :active),
+.removeBook__btn:is(:hover, :active) {
   background-color: #517c62;
 }
-.addbook__btn:active {
+.addbook__btn:active,
+.markRead__btn:active,
+.removeBook__btn:active {
   transform: translate(0, 2px);
+}
+
+.removeBook__btn {
+  border-style: none;
+  border-radius: 10px;
+  padding: 0.75em 2em;
+  background-color: #c9a7a8;
+  color: #393d3f;
+  font-size: 1em;
+  font-weight: 700;
+}
+.removeBook__btn:is(:hover, :active) {
+  background-color: #a87173;
+  color: #ffffff;
+}
+
+.markRead__btn,
+.removeBook__btn {
+  padding: 0.5em 1em;
+  font-size: 12px;
+  gap: 1em;
 }
 
 .maincont__modal {
@@ -100,15 +127,28 @@ input {
   }
 }
 .cards-container {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1em;
 }
 .cards-container .card {
   box-shadow: 2px 2px 4px rgba(57, 61, 63, 0.2);
+  border-radius: 10px;
   padding: 2em;
   background-color: #98b6b1;
   color: #393d3f;
   display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  text-align: center;
+  font-size: 18px;
+}
+.cards-container .card .btn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-top: 1em;
 }
 
 * {

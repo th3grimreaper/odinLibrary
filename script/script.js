@@ -49,11 +49,13 @@ function resetForm() {
   authorName.value = ''
   pageCount.value = ''
   readStatus.checked = false
+  cardsContainer.style.display = 'grid'
 }
 
 function showModal() {
   modal.style.display = 'block'
   addNewBookBtn.style.display = 'none'
+  cardsContainer.style.display = 'none'
 }
 
 function createBookCard(bookName, authorName, pageCount, readStatus) {
