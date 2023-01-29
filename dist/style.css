@@ -124,6 +124,7 @@ input {
   }
   .radio {
     flex-direction: column;
+    gap: 0.125em;
   }
 }
 .cards-container {

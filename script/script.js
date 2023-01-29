@@ -76,7 +76,7 @@ function createBookCard(bookName, authorName, pageCount, readStatus) {
   secondDiv.textContent = `By ${authorName}`
   thirdDiv.textContent = pageCount
   fourthDiv.textContent = readStatus ? 'Read' : 'Not Read'
-  markReadBtn.textContent = 'Mark Read'
+  markReadBtn.textContent = !readStatus ? 'Mark Read' : 'Mark Unread'
   removeBookBtn.textContent = 'Remove Book'
   fifthDiv.classList.add('btn')
   markReadBtn.classList.add('markRead__btn')
