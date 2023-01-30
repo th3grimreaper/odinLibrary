@@ -2,22 +2,31 @@ const addNewBookBtn = document.querySelector('.newbook__btn')
 const addBookBtn = document.querySelector('.addbook__btn')
 const cancelBtn = document.querySelector('.cancel__btn')
 const modal = document.querySelector('.maincont__modal')
-// book contents
+/* book contents */
 const bookName = document.querySelector('#book-name')
 const authorName = document.querySelector('#author-name')
 const pageCount = document.querySelector('#page-count')
 const readStatus = document.querySelector('#read-status')
-// book cards
+/* book cards */
 const cardsContainer = document.querySelector('.cards-container')
 
 addNewBookBtn.addEventListener('click', showModal)
 addBookBtn.addEventListener('click', addBooktoArray)
 cancelBtn.addEventListener('click', cancelBookAdd)
+
+/* remove cards */
 cardsContainer.addEventListener('click', (e) => {
   let indexOfCard
-  if (e.target.classList.contains('removeBook__btn')) {
+  let targetElement1 = e.target.classList.contains('removeBook__btn')
+  let targetElement2 = e.target.classList.contains('markRead__btn')
+  if (targetElement1) {
     indexOfCard = e.target.getAttribute('data-index')
     myLibrary.splice(indexOfCard, 1)
+    let grandParent = e.target.parentElement.parentElement
+    grandParent.style.display = 'none'
+  }
+  if (targetElement2) {
+    console.log(e.target.parentElement.parentElement)
   }
 })
 
