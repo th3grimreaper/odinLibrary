@@ -112,7 +112,7 @@ function createBookCard(indexVal, bookName, authorName, pageCount, readStatus) {
   removeBookBtn.setAttribute('data-index', indexVal)
   firstDiv.textContent = bookName
   secondDiv.textContent = `By ${authorName}`
-  thirdDiv.textContent = pageCount
+  thirdDiv.textContent = `Pages: ${pageCount}`
   fourthDiv.textContent = readStatus ? 'Read' : 'Not Read'
   markReadBtn.textContent = !readStatus ? 'Mark Read' : 'Mark Unread'
   removeBookBtn.textContent = 'Remove Book'
