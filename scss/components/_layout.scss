@@ -26,6 +26,7 @@ $font: 'Roboto', sans-serif;
   z-index: 2;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   .main__heading {
     color: colors.$headfoot-col;
