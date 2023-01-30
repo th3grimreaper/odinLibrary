@@ -24,7 +24,6 @@
 
 @mixin container-style($bgcolor) {
   background-color: $bgcolor;
-  padding: 0.75em;
 }
 
 @mixin card-style($bgcolor, $color) {

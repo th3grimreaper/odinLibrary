@@ -27,6 +27,7 @@ $font: 'Roboto', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 1em;
 
   .main__heading {
     color: colors.$headfoot-col;
@@ -43,6 +44,7 @@ $font: 'Roboto', sans-serif;
   align-items: center;
   gap: 1em;
   grid-row: 2/3;
+  padding: 1em;
 }
 
 /* footer */
