@@ -14,12 +14,12 @@ $font: 'Roboto', sans-serif;
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 2fr 10fr 1fr;
+  grid-template-rows: 1fr 10fr 1fr;
 }
 /* header */
 .header {
   @include mixins.container-style(colors.$header-dark-col);
-  font-size: clamp(2em, 5vw, 2.25em);
+  font-size: clamp(1.75em, 5vw, 2.25em);
   font-weight: 700;
   grid-row: 1/2;
   box-shadow: 0px 2px 3px rgba(colors.$dark-textbgshadow-col, 0.2);
@@ -27,7 +27,7 @@ $font: 'Roboto', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 1em;
+  padding: 0.5em;
 
   .main__heading {
     color: colors.$headfoot-col;
