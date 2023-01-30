@@ -2,10 +2,10 @@
 @use 'mixins';
 
 .maincont__modal {
-  @include mixins.shadow(colors.$deep-space-sparkle, 0.2);
-  color: colors.$deep-space-sparkle;
+  @include mixins.shadow(colors.$dark-textbgshadow-col, 0.2);
+  color: colors.$dark-textbgshadow-col;
   display: none;
-  @include mixins.container-style(colors.$opal-light);
+  @include mixins.container-style(colors.$card-bg-col);
   padding: 1.5em;
   border-style: none;
   border-radius: 10px;

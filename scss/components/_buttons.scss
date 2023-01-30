@@ -3,10 +3,10 @@
 
 .newbook__btn,
 .cancel__btn {
-  @include mixins.button-style(colors.$opal-light, colors.$pure-white, 1em);
-  @include mixins.shadow(colors.$deep-space-sparkle, 0.2);
+  @include mixins.button-style(colors.$op-col, colors.$header-dark-col, 1em);
+  @include mixins.shadow(colors.$dark-textbgshadow-col, 0.2);
   &:is(:hover, :active) {
-    @include mixins.button-hover(colors.$opal, 1);
+    @include mixins.button-hover(colors.$op-col-dark, 1);
   }
   @include mixins.button-translate(active);
 }
@@ -14,20 +14,19 @@
 .addbook__btn,
 .markRead__btn,
 .removeBook__btn {
-  @include mixins.button-style(colors.$russian-green-light, colors.$pure-white, 1em);
-  @include mixins.shadow(colors.$deep-space-sparkle, 0.2);
+  @include mixins.button-style(colors.$op-col, colors.$header-dark-col, 1em);
+  @include mixins.shadow(colors.$dark-textbgshadow-col, 0.2);
   &:is(:hover, :active) {
-    @include mixins.button-hover(colors.$russian-green, 1);
+    @include mixins.button-hover(colors.$op-col-dark, 1);
   }
   @include mixins.button-translate(active);
 }
 
 .removeBook__btn,
 .cancel__btn {
-  @include mixins.button-style(colors.$copper-rose, colors.$deep-space-sparkle, 1em);
+  @include mixins.button-style(colors.$cancel-op-col, colors.$header-dark-col, 1em);
   &:is(:hover, :active) {
-    @include mixins.button-hover(colors.$copper-rose-darker, 1);
-    color: colors.$pure-white;
+    @include mixins.button-hover(colors.$cancel-op-col-dark, 1);
   }
 }
 

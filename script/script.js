@@ -17,16 +17,30 @@ cancelBtn.addEventListener('click', cancelBookAdd)
 /* remove cards */
 cardsContainer.addEventListener('click', (e) => {
   let indexOfCard
-  let targetElement1 = e.target.classList.contains('removeBook__btn')
-  let targetElement2 = e.target.classList.contains('markRead__btn')
-  if (targetElement1) {
+  let targetElement = e.target.classList.contains('removeBook__btn')
+  if (targetElement) {
     indexOfCard = e.target.getAttribute('data-index')
-    myLibrary.splice(indexOfCard, 1)
     let grandParent = e.target.parentElement.parentElement
+    myLibrary.splice(indexOfCard, 1)
     grandParent.style.display = 'none'
+    index -= 1
   }
-  if (targetElement2) {
-    console.log(e.target.parentElement.parentElement)
+})
+
+/* mark book read/unread */
+cardsContainer.addEventListener('click', (e) => {
+  let indexOfCard
+  let targetElement = e.target.classList.contains('markRead__btn')
+  if (targetElement) {
+    indexOfCard = e.target.getAttribute('data-index')
+    let grandParent = e.target.parentElement.parentElement
+    grandParent.childNodes[3].textContent === 'Not Read'
+      ? (grandParent.childNodes[3].textContent = 'Read') &&
+        (e.target.textContent = 'Mark Unread') &&
+        (myLibrary[indexOfCard].readStatus = true)
+      : (grandParent.childNodes[3].textContent = 'Not Read') &&
+        (e.target.textContent = 'Mark Read') &&
+        (myLibrary[indexOfCard].readStatus = false)
   }
 })
 
@@ -42,10 +56,6 @@ function Book(bookName, author, pages, readStatus) {
 
 function addBookToLibrary(name, author, pages, read) {
   myLibrary.push(new Book(name, author, pages, read))
-}
-
-function removeBookFromLibrary(index) {
-  myLibrary.splice(index, 1)
 }
 
 function addBooktoArray(e) {

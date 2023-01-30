@@ -19,15 +19,15 @@ $font: 'Roboto', sans-serif;
 }
 /* header */
 .header {
-  @include mixins.container-style(colors.$copper-rose);
+  @include mixins.container-style(colors.$header-dark-col);
   font-size: clamp(1.5em, 5vw, 2em);
   font-weight: 700;
   grid-row: 1/2;
-  box-shadow: 0px 2px 3px rgba(colors.$deep-space-sparkle, 0.2);
+  box-shadow: 0px 2px 3px rgba(colors.$dark-textbgshadow-col, 0.2);
   z-index: 2;
 
   .main__heading {
-    color: colors.$deep-space-sparkle;
+    color: colors.$headfoot-col;
   }
 }
 
@@ -39,7 +39,7 @@ $font: 'Roboto', sans-serif;
 /* main content */
 
 .maincont {
-  @include mixins.container-style(colors.$almond);
+  @include mixins.container-style(colors.$maincont-bg-col);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -51,7 +51,7 @@ $font: 'Roboto', sans-serif;
 /* footer */
 
 .footer {
-  @include mixins.container-style(colors.$copper-rose);
+  @include mixins.container-style(colors.$header-dark-col);
   font-size: 12px;
   padding: 0.25em;
   grid-row: 3/4;
@@ -59,5 +59,5 @@ $font: 'Roboto', sans-serif;
   justify-content: center;
   align-items: center;
   padding: none;
-  color: colors.$deep-space-sparkle;
+  color: colors.$headfoot-col;
 }
