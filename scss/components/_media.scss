@@ -1,4 +1,8 @@
 @media (min-width: 600px) {
+  .header {
+    justify-content: flex-start;
+  }
+
   .input-container {
     flex-direction: row;
     justify-content: space-between;

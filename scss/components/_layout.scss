@@ -2,7 +2,6 @@
 @use 'mixins';
 @use 'buttons';
 @use 'modal';
-@use 'media';
 @use 'cards';
 
 $font: 'Roboto', sans-serif;
@@ -20,20 +19,17 @@ $font: 'Roboto', sans-serif;
 /* header */
 .header {
   @include mixins.container-style(colors.$header-dark-col);
-  font-size: clamp(1.5em, 5vw, 2em);
+  font-size: clamp(2em, 5vw, 2.25em);
   font-weight: 700;
   grid-row: 1/2;
   box-shadow: 0px 2px 3px rgba(colors.$dark-textbgshadow-col, 0.2);
   z-index: 2;
+  display: flex;
+  justify-content: center;
 
   .main__heading {
     color: colors.$headfoot-col;
   }
-}
-
-.header,
-.footer {
-  flex: none;
 }
 
 /* main content */
