@@ -51,7 +51,7 @@ function Book(bookName, author, pages, readStatus) {
   this.bookName = bookName
   this.author = author
   this.pages = pages
-  this.readStatus = readStatus
+  this.readstatus = readStatus
 }
 
 function addBookToLibrary(name, author, pages, read) {
