@@ -51,6 +51,7 @@ input {
   display: flex;
   flex-direction: column;
   gap: 0.125em;
+  accent-color: colors.$op-col;
 }
 .modal__buttons {
   display: flex;
