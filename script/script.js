@@ -99,8 +99,6 @@ function showModal() {
 function createBookCard(indexVal, bookName, authorName, pageCount, readStatus) {
   let fragment = document.createDocumentFragment()
   let card = document.createElement('div')
-  card.classList.add('card')
-  card.setAttribute('data-index', indexVal)
   let firstDiv = document.createElement('div')
   let secondDiv = document.createElement('div')
   let thirdDiv = document.createElement('div')
@@ -108,6 +106,8 @@ function createBookCard(indexVal, bookName, authorName, pageCount, readStatus) {
   let fifthDiv = document.createElement('div')
   let markReadBtn = document.createElement('button')
   let removeBookBtn = document.createElement('button')
+  card.classList.add('card')
+  card.setAttribute('data-index', indexVal)
   markReadBtn.setAttribute('data-index', indexVal)
   removeBookBtn.setAttribute('data-index', indexVal)
   firstDiv.textContent = bookName

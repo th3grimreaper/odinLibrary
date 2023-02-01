@@ -7,7 +7,7 @@
   @include mixins.shadow(colors.$dark-textbgshadow-col, 0.2);
   &:is(:hover, :active) {
     @include mixins.button-hover(colors.$op-col-dark, 1);
-    color: colors.$maincont-bg-col;
+    color: colors.$headfoot-col;
   }
   @include mixins.button-translate(active);
 }
@@ -19,7 +19,7 @@
   @include mixins.shadow(colors.$dark-textbgshadow-col, 0.2);
   &:is(:hover, :active) {
     @include mixins.button-hover(colors.$op-col-dark, 1);
-    color: colors.$maincont-bg-col;
+    color: colors.$headfoot-col;
   }
   @include mixins.button-translate(active);
 }
@@ -29,7 +29,7 @@
   @include mixins.button-style(colors.$cancel-op-col, colors.$header-dark-col, 1em);
   &:is(:hover, :active) {
     @include mixins.button-hover(colors.$cancel-op-col-dark, 1);
-    color: colors.$maincont-bg-col;
+    color: colors.$headfoot-col;
   }
 }
 
