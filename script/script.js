@@ -10,7 +10,7 @@ const readStatus = document.querySelector('#read-status')
 /* book cards */
 const cardsContainer = document.querySelector('.cards-container')
 
-addNewBookBtn.addEventListener('click', showModal)
+addNewBookBtn.addEventListener('click', openModal)
 addBookBtn.addEventListener('click', addBooktoArray)
 cancelBtn.addEventListener('click', cancelBookAdd)
 
@@ -36,11 +36,11 @@ cardsContainer.addEventListener('click', (e) => {
     let grandParent = e.target.parentElement.parentElement
     grandParent.childNodes[3].textContent === 'Not Read'
       ? (grandParent.childNodes[3].textContent = 'Read') &&
-        (e.target.textContent = 'Mark Unread') &&
-        (myLibrary[indexOfCard].readStatus = true)
+      (e.target.textContent = 'Mark Unread') &&
+      (myLibrary[indexOfCard].readStatus = true)
       : (grandParent.childNodes[3].textContent = 'Not Read') &&
-        (e.target.textContent = 'Mark Read') &&
-        (myLibrary[indexOfCard].readStatus = false)
+      (e.target.textContent = 'Mark Read') &&
+      (myLibrary[indexOfCard].readStatus = false)
   }
 })
 
@@ -90,7 +90,7 @@ function resetForm() {
   cardsContainer.style.display = 'grid'
 }
 
-function showModal() {
+function openModal() {
   modal.style.display = 'block'
   addNewBookBtn.style.display = 'none'
   cardsContainer.style.display = 'none'
