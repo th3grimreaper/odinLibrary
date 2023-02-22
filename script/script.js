@@ -36,22 +36,24 @@ cardsContainer.addEventListener('click', (e) => {
     let grandParent = e.target.parentElement.parentElement
     grandParent.childNodes[3].textContent === 'Not Read'
       ? (grandParent.childNodes[3].textContent = 'Read') &&
-      (e.target.textContent = 'Mark Unread') &&
-      (myLibrary[indexOfCard].readStatus = true)
+        (e.target.textContent = 'Mark Unread') &&
+        (myLibrary[indexOfCard].readStatus = true)
       : (grandParent.childNodes[3].textContent = 'Not Read') &&
-      (e.target.textContent = 'Mark Read') &&
-      (myLibrary[indexOfCard].readStatus = false)
+        (e.target.textContent = 'Mark Read') &&
+        (myLibrary[indexOfCard].readStatus = false)
   }
 })
 
 let myLibrary = []
 let index = 0
 
-function Book(bookName, author, pages, readStatus) {
-  this.bookName = bookName
-  this.author = author
-  this.pages = pages
-  this.readstatus = readStatus
+class Book {
+  constructor(bookName, author, pages, readStatus) {
+    this.bookName = bookName
+    this.author = author
+    this.pages = pages
+    this.readstatus = readStatus
+  }
 }
 
 function addBookToLibrary(name, author, pages, read) {
