@@ -17,10 +17,10 @@ cancelBtn.addEventListener('click', cancelBookAdd)
 /* remove cards */
 cardsContainer.addEventListener('click', (e) => {
   let indexOfCard
-  let targetElement = e.target.classList.contains('removeBook__btn')
+  const targetElement = e.target.classList.contains('removeBook__btn')
   if (targetElement) {
     indexOfCard = e.target.getAttribute('data-index')
-    let grandParent = e.target.parentElement.parentElement
+    const grandParent = e.target.parentElement.parentElement
     myLibrary.splice(indexOfCard, 1)
     grandParent.style.display = 'none'
     index -= 1
@@ -30,10 +30,10 @@ cardsContainer.addEventListener('click', (e) => {
 /* mark book read/unread */
 cardsContainer.addEventListener('click', (e) => {
   let indexOfCard
-  let targetElement = e.target.classList.contains('markRead__btn')
+  const targetElement = e.target.classList.contains('markRead__btn')
   if (targetElement) {
     indexOfCard = e.target.getAttribute('data-index')
-    let grandParent = e.target.parentElement.parentElement
+    const grandParent = e.target.parentElement.parentElement
     grandParent.childNodes[3].textContent === 'Not Read'
       ? (grandParent.childNodes[3].textContent = 'Read') &&
         (e.target.textContent = 'Mark Unread') &&
@@ -63,8 +63,19 @@ function addBookToLibrary(name, author, pages, read) {
 function addBooktoArray(e) {
   e.preventDefault()
   if (formValidation()) {
-    addBookToLibrary(bookName.value, authorName.value, pageCount.value, readStatus.checked)
-    createBookCard(index, bookName.value, authorName.value, pageCount.value, readStatus.checked)
+    addBookToLibrary(
+      bookName.value,
+      authorName.value,
+      pageCount.value,
+      readStatus.checked
+    )
+    createBookCard(
+      index,
+      bookName.value,
+      authorName.value,
+      pageCount.value,
+      readStatus.checked
+    )
     resetForm()
     index += 1
   }
@@ -76,7 +87,11 @@ function cancelBookAdd(e) {
 }
 
 function formValidation() {
-  if (bookName.reportValidity() && authorName.reportValidity() && pageCount.reportValidity()) {
+  if (
+    bookName.reportValidity() &&
+    authorName.reportValidity() &&
+    pageCount.reportValidity()
+  ) {
     return true
   }
   return false
@@ -99,15 +114,15 @@ function openModal() {
 }
 
 function createBookCard(indexVal, bookName, authorName, pageCount, readStatus) {
-  let fragment = document.createDocumentFragment()
-  let card = document.createElement('div')
-  let firstDiv = document.createElement('div')
-  let secondDiv = document.createElement('div')
-  let thirdDiv = document.createElement('div')
-  let fourthDiv = document.createElement('div')
-  let fifthDiv = document.createElement('div')
-  let markReadBtn = document.createElement('button')
-  let removeBookBtn = document.createElement('button')
+  const fragment = document.createDocumentFragment()
+  const card = document.createElement('div')
+  const firstDiv = document.createElement('div')
+  const secondDiv = document.createElement('div')
+  const thirdDiv = document.createElement('div')
+  const fourthDiv = document.createElement('div')
+  const fifthDiv = document.createElement('div')
+  const markReadBtn = document.createElement('button')
+  const removeBookBtn = document.createElement('button')
   card.classList.add('card')
   card.setAttribute('data-index', indexVal)
   markReadBtn.setAttribute('data-index', indexVal)
